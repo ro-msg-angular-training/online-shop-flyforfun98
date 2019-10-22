@@ -1,0 +1,9 @@
+<nav *ngIf="authService.user">
+  <ul>
+    <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}" routerLink="/products">Products</a></li>
+    <li *ngIf="authService.isCustomer()"><a routerLinkActive="active" routerLink="/my-cart" >Cart</a></li>
+    <li class="on-right"><a routerLinkActive="active" routerLink="/login" (click)="onLogOut()">Log Out</a></li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>

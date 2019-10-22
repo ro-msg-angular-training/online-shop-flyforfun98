@@ -1,0 +1,19 @@
+<div class="login-box">
+
+  <img src="/assets/avatar.png" class="image avatar">
+  <h1>Login Here</h1>
+  <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+    <p>Username</p>
+    <input type="text" name="username" placeholder="Enter Username" formControlName="username">
+    <p>Password</p>
+    <input type="password" name="password" placeholder="Enter Password" formControlName="password">
+    <input type="submit" name="submit1" value="Login" class="login-button">
+    <span class="help-block" *ngIf="!password.valid && password.touched"> Please enter a valid password </span>
+  </form>
+
+  <div class="alert-message">
+    <div class="alert alert-danger" role="alert" *ngIf="errorMessage">{{errorMessage}}</div>
+  </div>
+
+
+</div>

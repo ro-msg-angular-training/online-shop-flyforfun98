@@ -1,0 +1,37 @@
+<div class="center-button">
+  <button class="custom-button" routerLink="/products/add" *ngIf="authService.isAdmin()">New Product</button>
+</div>
+<div class="container-table100">
+  <div class="wrap-table100">
+
+    <div class="table100 ver3 m-b-110">
+      <div class="table100-head">
+        <table>
+          <thead>
+          <tr class="row100 head">
+            <th [class]="'cell100 column'+(i+1)" *ngFor="let column of columnNames; let i = index">
+              {{ column }}
+            </th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+
+      <div class="table100-body">
+        <table>
+          <tbody>
+          <tr class="row100 body" *ngFor="let row of products">
+
+            <td class="cell100 column1-rows"><a class="product-name"
+                                                (click)="onLoadProduct(row.id)"> {{ row.name }} </a></td>
+            <td class="cell100 column2"><a class="product-data"> {{ row.category }} </a></td>
+            <td class="cell100 column3"><a class="product-data"> {{ row.price }} </a></td>
+
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

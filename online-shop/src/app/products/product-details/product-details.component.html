@@ -1,0 +1,37 @@
+<div class="center" *ngIf="product">
+
+  <button class="custom-button" (click)="onEdit()" *ngIf="authService.isAdmin()">Edit</button>
+  <div class="card">
+    <div class="additional">
+      <div class="user-card">
+        <div class="level center">
+          Product
+        </div>
+        <img src="{{product.image}}" alt="" class="custom-image"/>
+      </div>
+      <div class="more-info">
+        <h1>{{product.name}}</h1>
+        <div class="coords">
+          <span>Category</span>
+          <span>Price</span>
+        </div>
+        <div class="coords">
+          <span>{{product.category}}</span>
+          <span>{{product.price}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="general">
+      <h1>{{product.name}}</h1>
+      <p>{{product.description}}</p>
+    </div>
+  </div>
+
+  <div class="button-position">
+    <button class="custom-button" (click)="onDelete()" *ngIf="authService.isAdmin()">Delete</button>
+    <div class="divider"></div>
+    <button class="custom-button" (click)="onAdd()" *ngIf="authService.isCustomer()">Add to Cart</button>
+  </div>
+
+
+</div>

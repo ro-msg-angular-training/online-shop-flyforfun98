@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="0cc1dec590ecd74bef71a865fb364779bc42a749" datatype="html">
+        <source>Category:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/product-detail/product-detail.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Category Text</note>
+      </trans-unit>
+      <trans-unit id="6ffeec779783d93e43e2f47cf6d45d74321bd040" datatype="html">
+        <source>Price:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/product-detail/product-detail.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Price Text</note>
+      </trans-unit>
+      <trans-unit id="eec715de352a6b114713b30b640d319fa78207a0" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/product-detail/product-detail.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Description Text</note>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/confirmation-modal/confirmation-modal.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Delete Text</note>
+      </trans-unit>
+      <trans-unit id="8a2f137e2d321551fa4d91c0d2320a0de5b480fa" datatype="html">
+        <source>Are
+    you sure you want to delete this product?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/confirmation-modal/confirmation-modal.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">A text confirming whether are you sure you want to perform this delete product action</note>
+        <note priority="1" from="meaning">Confirmation Text</note>
+      </trans-unit>
+      <trans-unit id="d7b35c384aecd25a516200d6921836374613dfe7" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/confirmation-modal/confirmation-modal.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Cancel Button</note>
+      </trans-unit>
+      <trans-unit id="4f20f2d5a6882190892e58b85f6ccbedfa737952" datatype="html">
+        <source>Yes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/confirmation-modal/confirmation-modal.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Confirm Button</note>
+      </trans-unit>
+      <trans-unit id="b620c4234610a95f71c9790e14ed6cfcb811f61c" datatype="html">
+        <source>
+    The product was added to the cart!
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/page-product-details.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Product Added Data Message</note>
+      </trans-unit>
+      <trans-unit id="a6439130d570534db1643f243846928f4505ff33" datatype="html">
+        <source>Delete
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/page-product-details.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Delete Button</note>
+      </trans-unit>
+      <trans-unit id="24b14c18e8cd3db2a9c3f773b8400816d09d3ed9" datatype="html">
+        <source>Add to Cart
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-details/page-product-details.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Add to Cart Button</note>
+      </trans-unit>
+      <trans-unit id="48dfb134cb8d324bb45f2f9f3bd7d7afc49bc3f8" datatype="html">
+        <source>Products</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-list/page-product-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Page Title Products List</note>
+      </trans-unit>
+      <trans-unit id="ba2f04b1b1b605a077948e34a38efdfc9f973999" datatype="html">
+        <source>Create Product
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-list/page-product-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Page Button Create Button</note>
+      </trans-unit>
+      <trans-unit id="dd2d7667d67429acd8bd88388d1b28d23953b2ed" datatype="html">
+        <source> Category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-list/product-table/product-table.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Title for the Table Category Header</note>
+        <note priority="1" from="meaning">Category Table Header</note>
+      </trans-unit>
+      <trans-unit id="98326957b8bebc4cc0459692c9a5f560437aba0f" datatype="html">
+        <source> Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-list/product-table/product-table.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Title for the Table Name Header</note>
+        <note priority="1" from="meaning">Name Table Header</note>
+      </trans-unit>
+      <trans-unit id="8bc36d1a0b9ff4c727adf9d5c85cb9bf066871b5" datatype="html">
+        <source> Price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-list/product-table/product-table.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Title for the Table Price Header</note>
+        <note priority="1" from="meaning">Price Table Header</note>
+      </trans-unit>
+      <trans-unit id="81f7574b23fb5317c17150c6754cbc5c81de52a4" datatype="html">
+        <source>
+    Your order was created!
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-shopping-cart/page-shopping-cart.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Order Created Data Message</note>
+      </trans-unit>
+      <trans-unit id="a2ba884eba8ce045444989c1ce1a87c04d9f9224" datatype="html">
+        <source>Checkout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-shopping-cart/page-shopping-cart.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Order Checkout Button</note>
+      </trans-unit>
+      <trans-unit id="e34ccdc04fa27e9d1079aaecabbea83b644ab2dd" datatype="html">
+        <source>
+      The cart is empty!
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-shopping-cart/page-shopping-cart.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Cart Empty Data Message</note>
+      </trans-unit>
+      <trans-unit id="5e5265db7ce2427826de7033e17a21e2838901cc" datatype="html">
+        <source>Product Edit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-edit/page-product-edit.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Page Title Product Edit</note>
+      </trans-unit>
+      <trans-unit id="9b534638881eb87639b24c5a9508b3eec7e5898e" datatype="html">
+        <source>Product Create</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-product-add/page-product-add.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Page Title Product Create</note>
+      </trans-unit>
+      <trans-unit id="5787fcac03eda5b96436527a54e60cfbb7c30d95" datatype="html">
+        <source>Product Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-form/product-form.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Form Label Product Name</note>
+      </trans-unit>
+      <trans-unit id="a9e18fe53a6fdf81267883dc7b3cdcc031727dbc" datatype="html">
+        <source>Product Category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-form/product-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Form Label Product Category</note>
+      </trans-unit>
+      <trans-unit id="5bf1533e898fc1e70ce531c6f9ce521765f27a9e" datatype="html">
+        <source>Image link</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-form/product-form.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Form Label Product Image Link</note>
+      </trans-unit>
+      <trans-unit id="135ee3b8f1c03e9c1fe364f1c8cdff12a92dbaf8" datatype="html">
+        <source>Product price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-form/product-form.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Form Label Product Price</note>
+      </trans-unit>
+      <trans-unit id="2aa75cd506343f908b7fd2ac6aafd1e96b538f15" datatype="html">
+        <source>Product Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-form/product-form.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Form Label Product Description</note>
+      </trans-unit>
+      <trans-unit id="52c9a103b812f258bcddc3d90a6e3f46871d25fe" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-form/product-form.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Button Save</note>
+      </trans-unit>
+      <trans-unit id="94d199dc674b4835569d166bbbeff52b755f5d05" datatype="html">
+        <source>
+        Sing In
+        <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon&gt;"/>person<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon&gt;"/>
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-login/page-login.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Title for the login page card</note>
+        <note priority="1" from="meaning">Log In Card Header</note>
+      </trans-unit>
+      <trans-unit id="08c74dc9762957593b91f6eb5d65efdfc975bf48" datatype="html">
+        <source>Username</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-login/login-form/login-form.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Form Username Label</note>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-login/login-form/login-form.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Form Password Label</note>
+      </trans-unit>
+      <trans-unit id="41af8ea48eb39f365176a926af10b63a60cd2fa0" datatype="html">
+        <source>
+    Invalid username or password!
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-login/login-form/login-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Invalid Account Data Message</note>
+      </trans-unit>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-login/login-form/login-form.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Login Button</note>
+      </trans-unit>
+      <trans-unit id="68cba31e754e5872a36b9461b8f0efa680d93724" datatype="html">
+        <source> Category
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Title for the Table Category Header</note>
+        <note priority="1" from="meaning">Category Table Header</note>
+      </trans-unit>
+      <trans-unit id="5602c4fd5515ce7fff6d62fdd0129e723a0ea6fa" datatype="html">
+        <source> Quantity
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Title for the Table Quantity Header</note>
+        <note priority="1" from="meaning">Quantity Table Header</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
