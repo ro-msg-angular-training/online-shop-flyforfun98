@@ -1,14 +1,33 @@
 <div class="login-box">
 
   <img src="/assets/avatar.png" class="image avatar">
-  <h1>Login Here</h1>
+  <h1 i18n="Login Header|Title for the login page">Login Here</h1>
   <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
-    <p>Username</p>
-    <input type="text" name="username" placeholder="Enter Username" formControlName="username">
-    <p>Password</p>
-    <input type="password" name="password" placeholder="Enter Password" formControlName="password">
-    <input type="submit" name="submit1" value="Login" class="login-button">
-    <span class="help-block" *ngIf="!password.valid && password.touched"> Please enter a valid password </span>
+
+    <ul class="ul-position">
+      <li class="mat-form-field--inline">
+        <mat-form-field>
+          <mat-label i18n="Username Label|Label for the username field">Username</mat-label>
+          <input matInput type="text" placeholder="Enter Username" formControlName="username"
+                 i18n-placeholder="Username Placeholder|Value for the username placeholder">
+        </mat-form-field>
+      </li>
+
+      <li class="mat-form-field--inline">
+        <mat-form-field>
+          <mat-label i18n="Password Label|Password for the password field">Password</mat-label>
+          <input matInput type="password" placeholder="Enter Password" formControlName="password"
+                 i18n-placeholder="Password Placeholder|Value for the password placeholder">
+        </mat-form-field>
+      </li>
+    </ul>
+    <input type="submit" name="submit1" value="Login" class="login-button"
+           i18n-value="Login Button|Value for the login button">
+    <div class="password-touched">
+      <span *ngIf="!password.valid && password.touched"
+            i18n="Empty Password|Span for the password error message field">
+        Please enter a password </span>
+    </div>
   </form>
 
   <div class="alert-message">

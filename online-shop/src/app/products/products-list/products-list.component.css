@@ -1,146 +1,54 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.mat-header-row {
+  background: linear-gradient(-90deg, #EE786E, #d5c9de);
+}
+
+.mat-header-cell {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mat-row {
+  background-color: #404040;
+}
+
+.custom-container {
+  width: 70% !important;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 50px;
+}
+
+.center-button {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.mat-header-cell {
+  width: 27% !important;
+}
+
 .product-name {
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
+  color: #EE786E !important;
+
+}
+
+.product-name:hover {
+  text-decoration: underline !important;
 }
 
 .product-data {
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
-}
-
-.container-table100 {
-  width: 100%;
-  min-height: 100px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-
-}
-
-.wrap-table100 {
-  width: 1170px;
-}
-
-table {
-  width: 100%;
-}
-
-th, td {
-  font-weight: unset;
-  padding-right: 10px;
-}
-
-.column1-rows {
-  width: 25%;
-  padding-left: 40px;
-  text-decoration: underline;
-}
-
-.column1 {
-  width: 25%;
-  padding-left: 40px;
-}
-
-.column2 {
-  width: 15%;
-}
-
-.column3 {
-  width: 15%;
-}
-
-.column4 {
-  width: 30%;
-}
-
-
-.table100-head th {
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-
-.table100-body td {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-
-.table100 {
-  position: relative;
-  padding-top: 60px;
-}
-
-.table100-head {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.table100-body {
-  max-height: 585px;
-  overflow: auto;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-}
-
-.table100.ver3 {
-  background-color: #393939;
-}
-
-.table100.ver3 th {
-  font-family: Lato-Bold, serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #dE685E;
-  text-transform: uppercase;
-  background-color: #393939;
-}
-
-.table100.ver3 td {
-  font-family: Lato-Regular, serif;
-  font-size: 15px;
-  color: #808080;
-  background-color: #d5c9de;
-}
-
-
-.table100.ver3 {
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
-}
-
-
-.table100.ver3 tr:hover td {
-  background-color: #dE685E;
-}
-
-.center-button{
-  text-align: center;
-  padding-bottom: 10px;
+  font-size: 18px;
+  color: #d5c9de !important;
 }
 
 .custom-button:hover{
   color: #d5c9de!important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

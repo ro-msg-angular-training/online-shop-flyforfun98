@@ -3,7 +3,7 @@ import {Product} from '../../models/product';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ProductService} from '../product.service';
 import {ShoppingCartService} from '../../shopping-cart/shopping-cart.service';
-import {AuthService} from "../../login-page/auth.service";
+import {AuthService} from '../../login-page/auth.service';
 
 @Component({
   selector: 'app-product-details',
@@ -14,12 +14,14 @@ export class ProductDetailsComponent implements OnInit {
 
   product: Product;
   productId: number;
+  authService: AuthService;
 
   constructor(private route: ActivatedRoute,
               private productService: ProductService,
               private router: Router,
               private shoppingService: ShoppingCartService,
-              private authService: AuthService) {
+              authService: AuthService) {
+    this.authService = authService;
   }
 
   ngOnInit() {

@@ -1,37 +1,41 @@
 <div class="center-button">
-  <button class="custom-button" routerLink="/products/add" *ngIf="authService.isAdmin()">New Product</button>
+  <button mat-button class="custom-button"
+          routerLink="/products/add"
+          *ngIf="authService.isAdmin()"
+          i18n="New Product Button|Value for the new product button">New Product
+  </button>
 </div>
-<div class="container-table100">
-  <div class="wrap-table100">
+<mat-table class="mat-elevation-z8 custom-container" [dataSource]="products">
 
-    <div class="table100 ver3 m-b-110">
-      <div class="table100-head">
-        <table>
-          <thead>
-          <tr class="row100 head">
-            <th [class]="'cell100 column'+(i+1)" *ngFor="let column of columnNames; let i = index">
-              {{ column }}
-            </th>
-          </tr>
-          </thead>
-        </table>
-      </div>
+  <ng-container matColumnDef="Name">
+    <mat-header-cell i18n="Header Name Title|Name for the name header of the table"
+                     *matHeaderCellDef>Name
+    </mat-header-cell>
+    <mat-cell *matCellDef="let product">
+      <a (click)="onLoadProduct(product.id)"
+         class="product-name">{{product.name}}
+      </a>
+    </mat-cell>
+  </ng-container>
 
-      <div class="table100-body">
-        <table>
-          <tbody>
-          <tr class="row100 body" *ngFor="let row of products">
+  <ng-container matColumnDef="Category">
+    <mat-header-cell i18n="Header Category Title|Category for the category header of the table"
+                     *matHeaderCellDef>Category
+    </mat-header-cell>
+    <mat-cell class="product-data"
+              *matCellDef="let product">{{product.category}}</mat-cell>
+  </ng-container>
 
-            <td class="cell100 column1-rows"><a class="product-name"
-                                                (click)="onLoadProduct(row.id)"> {{ row.name }} </a></td>
-            <td class="cell100 column2"><a class="product-data"> {{ row.category }} </a></td>
-            <td class="cell100 column3"><a class="product-data"> {{ row.price }} </a></td>
+  <ng-container matColumnDef="Price">
+    <mat-header-cell i18n="Header Price Title|Price for the price header of the table"
+                     *matHeaderCellDef>Price
+    </mat-header-cell>
+    <mat-cell class="product-data"
+              *matCellDef="let product">{{product.price}}</mat-cell>
+  </ng-container>
 
-          </tr>
+  <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: columnNames"></mat-row>
 
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
+
+</mat-table>

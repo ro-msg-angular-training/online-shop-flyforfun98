@@ -106,6 +106,17 @@
   float: right;
 }
 
+.coords1 {
+  color: white;
+  font-size: 30px;
+  margin: 30px 15px 0 15px;
+}
+
+.coords2 {
+  color: #d5c9de;
+  font-size: 24px;
+  margin: 30px 15px 0 15px;
+}
 
 .card .general {
   width: 400px;

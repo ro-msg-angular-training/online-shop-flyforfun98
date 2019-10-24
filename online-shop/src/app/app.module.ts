@@ -9,7 +9,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {LoginPageComponent} from './login-page/login-page.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MatButtonModule, MatDividerModule, MatCheckboxModule,
+  MatDividerModule, MatCheckboxModule,
   MatCardModule, MatTableModule, MatFormFieldModule,
   MatGridListModule, MatInputModule, MatIconModule,
   MatListModule, MatSidenavModule
@@ -19,6 +19,9 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
 import { ProductEditComponent } from './products/product-edit/product-edit.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {ProductListComponent} from './products/products-list/products-list.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 @NgModule({
@@ -39,7 +42,7 @@ import {ProductListComponent} from './products/products-list/products-list.compo
     ReactiveFormsModule,
     HttpClientModule,
     MatInputModule, MatFormFieldModule, MatCardModule, MatTableModule, MatButtonModule, MatCheckboxModule,
-    MatDividerModule, MatIconModule, MatGridListModule, MatListModule, MatSidenavModule
+    MatDividerModule, MatIconModule, MatGridListModule, MatListModule, MatSidenavModule, MatPaginatorModule, MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent],

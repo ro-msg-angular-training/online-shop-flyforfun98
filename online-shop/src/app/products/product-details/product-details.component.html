@@ -1,21 +1,25 @@
 <div class="center" *ngIf="product">
 
-  <button class="custom-button" (click)="onEdit()" *ngIf="authService.isAdmin()">Edit</button>
+  <button mat-button class="custom-button"
+          (click)="onEdit()"
+          *ngIf="authService.isAdmin()"
+          i18n="Edit Button|Value for the edit button">Edit
+  </button>
   <div class="card">
     <div class="additional">
       <div class="user-card">
-        <div class="level center">
+        <div class="level center" i18n="Product Tag|Value for the product tag">
           Product
         </div>
         <img src="{{product.image}}" alt="" class="custom-image"/>
       </div>
       <div class="more-info">
         <h1>{{product.name}}</h1>
-        <div class="coords">
-          <span>Category</span>
-          <span>Price</span>
+        <div class="coords coords1">
+          <span i18n="Header Category Title|Category for the category column of the product">Category</span>
+          <span i18n="Header Price Title|Price for the price column of the product">Price</span>
         </div>
-        <div class="coords">
+        <div class="coords coords2">
           <span>{{product.category}}</span>
           <span>{{product.price}}</span>
         </div>
@@ -28,9 +32,17 @@
   </div>
 
   <div class="button-position">
-    <button class="custom-button" (click)="onDelete()" *ngIf="authService.isAdmin()">Delete</button>
+    <button mat-button class="custom-button"
+            (click)="onDelete()"
+            *ngIf="authService.isAdmin()"
+            i18n="Delete Button|Value for the delete button">Delete
+    </button>
     <div class="divider"></div>
-    <button class="custom-button" (click)="onAdd()" *ngIf="authService.isCustomer()">Add to Cart</button>
+    <button mat-button class="custom-button"
+            (click)="onAdd()"
+            *ngIf="authService.isCustomer()"
+            i18n="Add to Cart Button|Value for the add to cart button">Add to Cart
+    </button>
   </div>
 
 

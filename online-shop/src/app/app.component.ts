@@ -4,12 +4,18 @@ import {AuthService} from './login-page/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css',
+    './products/products-list/products-list.component.css']
 })
 export class AppComponent {
   title = 'online-shop';
 
-  constructor(private authService: AuthService) {}
+  authService: AuthService;
+
+  constructor(authService: AuthService) {
+    this.authService = authService;
+  }
+
 
   onLogOut() {
     this.authService.logOut();

@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {AuthService} from './auth.service';
 import {AuthUser} from '../models/auth-user';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -43,7 +43,7 @@ export class LoginPageComponent {
     this.authService.authenticate(username, password).subscribe(
       user => {
         this.user = user;
-        this.authService.setUser(user);
+        this.authService.setUser(this.user);
         this.errorMessage = null;
         this.router.navigate(['products']);
       }, error => {

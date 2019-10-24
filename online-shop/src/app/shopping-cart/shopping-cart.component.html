@@ -1,34 +1,50 @@
 <div class="center-button">
-  <button class="custom-button" *ngIf="shoppingCartItems.length !== 0" [disabled]="!shoppingCartItems" (click)="onCheckout()">Checkout</button>
+  <button mat-button class="custom-button"
+          *ngIf="shoppingCartItems.length !== 0"
+          [disabled]="!shoppingCartItems"
+          (click)="onCheckout()"
+          i18n="Checkout Button|Value for the checkout button">Checkout
+  </button>
 </div>
-<table mat-table [dataSource]="shoppingCartItems" class="mat-elevation-z8 w-100 mt-md-1 custom-container" *ngIf="shoppingCartItems">
-  <ng-container matColumnDef="category">
-    <th mat-header-cell *matHeaderCellDef> Category
-    </th>
-    <td mat-cell *matCellDef="let element"> {{element.product.category}} </td>
-  </ng-container>
+<table mat-table [dataSource]="shoppingCartItems"
+       class="mat-elevation-z8 w-100 mt-md-1 custom-container"
+       *ngIf="shoppingCartItems">
   <ng-container matColumnDef="Name">
-    <th mat-header-cell *matHeaderCellDef> Name</th>
-    <td mat-cell *matCellDef="let element"><a routerLink="/products/{{element.product.id}}">{{element.product.name}}</a>
+    <th mat-header-cell i18n="Header Name Title|Name for the name header of the mat table"
+        *matHeaderCellDef> Name
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <a class="product-name"
+         routerLink="/products/{{element.product.id}}">{{element.product.name}}</a>
     </td>
   </ng-container>
   <ng-container matColumnDef="Category">
-    <th mat-header-cell *matHeaderCellDef> Category</th>
-    <td mat-cell *matCellDef="let element">{{element.product.category}}</td>
+    <th mat-header-cell i18n="Header Category Title|Category for the category header of the mat table"
+        *matHeaderCellDef> Category
+    </th>
+    <td mat-cell *matCellDef="let element"
+        class="product-data">{{element.product.category}}</td>
   </ng-container>
   <ng-container matColumnDef="Price">
-    <th mat-header-cell *matHeaderCellDef> Price</th>
-    <td mat-cell *matCellDef="let element">{{element.product.price}}</td>
+    <th mat-header-cell i18n="Header Price Title|Price for the price header of the mat table"
+        *matHeaderCellDef> Price
+    </th>
+    <td mat-cell *matCellDef="let element"
+        class="product-data">{{element.product.price}}</td>
   </ng-container>
   <ng-container matColumnDef="Quantity">
-    <th mat-header-cell *matHeaderCellDef> Quantity
+    <th mat-header-cell i18n="Header Quantity Title|Quantity for the quantity header of the mat table"
+        *matHeaderCellDef> Quantity
     </th>
-    <td mat-cell *matCellDef="let element">{{element.quantity}}</td>
+    <td mat-cell *matCellDef="let element"
+        class="product-data">{{element.quantity}}</td>
   </ng-container>
   <ng-container matColumnDef="Action">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let element">
-      <button mat-raised-button type="button" color="warn" (click)="removeItem(element)"><i
+      <button mat-raised-button type="button"
+              color="warn"
+              (click)="removeItem(element)"><i
         class="fa fa-close"></i></button>
     </td>
   </ng-container>

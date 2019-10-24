@@ -2,7 +2,7 @@ import {browser} from 'protractor';
 import {LoginPageTestComponent} from './test-components/login-page.test-component';
 import {MainPageTestComponent} from './test-components/main-page.test-component';
 import {ProductListPageTestComponent} from './test-components/product-list-page.test-component';
-import {ProductDetailsPageTestComponent} from "./test-components/product-details-page.test-component";
+import {ProductDetailsPageTestComponent} from './test-components/product-details-page.test-component';
 
 describe('online-shop product detail flow', () => {
   let loginPage: LoginPageTestComponent;

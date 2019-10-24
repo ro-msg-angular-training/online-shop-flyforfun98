@@ -1,15 +1,7 @@
-body{
-
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-position: center;
-  font-family: sans-serif;
-}
 .login-box{
 
   width: 420px;
-  height: 450px;
+  height: 470px;
   color: #404040;
   font-size: 20px;
   top: 40%;
@@ -37,24 +29,10 @@ h1{
   text-align: center;
   font-size: 27px;
 }
-.login-box p{
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-}
+
 .login-box input{
   width: 100%;
   margin-bottom: 20px;
-}
-.login-box input[type="text"], input[type="password"]
-{
-  border: none;
-  border-bottom: 1px solid #fff;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  color: #fff;
-  font-size: 16px;
 }
 
 .login-box input[type="submit"], input[type="button"]
@@ -79,33 +57,8 @@ input[type="button"]:hover
   font-weight: 700 !important;
   letter-spacing: 3px;
   background: #eee;
-  box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.3s ease 0s;
-}
-
-.login-box a{
-  text-decoration: none;
-  font-size: 14px;
-  color: #fff;
-}
-
-.container-class{
-  margin-top: 10px;
-  width: 500px;
-  border: 1px solid #404040;
-  box-shadow: 5px 3px 10px #777;
-  margin-left: 773px;
-  border-radius: 15px;
-  height: 75px;
-  text-align: center;
-  background: #404040;
-  color: #eee;
-  padding-top: 20px;
-}
-
-input.ng-invalid.ng-touched[type="text"],
-input.ng-invalid.ng-touched[type="password"]{
-  border-bottom: 1px solid red;
 }
 
 ::placeholder {
@@ -116,6 +69,24 @@ input.ng-invalid.ng-touched[type="password"]{
   text-align: center;
   margin-top: 100px;
 }
+
+.mat-form-field--inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mat-form-field--inline .mat-form-field {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.password-touched {
+  text-align: center;
+  color: red;
+}
+
 
 
 
