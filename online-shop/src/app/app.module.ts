@@ -22,6 +22,12 @@ import {ProductListComponent} from './products/products-list/products-list.compo
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {StoreModule} from '@ngrx/store';
+import {appReducers} from './store/reducers/app.reducers';
+import {EffectsModule} from '@ngrx/effects';
+import {UserEffects} from './store/effects/user.effects';
+import {ProductEffects} from './store/effects/product.effects';
+import {ShoppingCartEffects} from './store/effects/shopping-cart.effects';
 
 
 @NgModule({
@@ -37,6 +43,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
   ],
   imports: [
     BrowserModule,
+    StoreModule.forRoot(appReducers),
+    EffectsModule.forRoot([UserEffects, ProductEffects, ShoppingCartEffects]),
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,

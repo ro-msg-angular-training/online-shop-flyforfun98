@@ -1,8 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ProductService} from '../product.service';
 import {Product} from '../../models/product';
+import {Store} from '@ngrx/store';
+import {IAppState} from '../../store/state/app.state';
+import {selectSelectedProduct} from '../../store/selectors/product.selectors';
+import {UpdateProduct} from '../../store/actions/product.actions';
 
 @Component({
   selector: 'app-product-edit',
@@ -14,8 +17,8 @@ export class ProductEditComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
-              private productService: ProductService,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private store: Store<IAppState>) {
   }
 
   productForm = this.formBuilder.group({
@@ -58,7 +61,7 @@ export class ProductEditComponent implements OnInit {
 
   ngOnInit() {
     this.productId = this.route.snapshot.params.id;
-    this.productService.getProduct(this.productId).subscribe(product => {
+    this.store.select(selectSelectedProduct).subscribe(product => {
       this.product = product;
       this.productName.setValue(this.product.name);
       this.productCategory.setValue(this.product.category);
@@ -71,15 +74,15 @@ export class ProductEditComponent implements OnInit {
 
   submitFormData() {
     const editedProduct = new Product();
+    editedProduct.id = this.productId;
     editedProduct.name = this.productName.value;
     editedProduct.price = this.productPrice.value;
     editedProduct.description = this.productDescription.value;
     editedProduct.category = this.productCategory.value;
     editedProduct.image = this.productImage.value;
 
-    this.productService.editProduct(this.productId, editedProduct).subscribe(() =>
-      this.router.navigate(['products/' + this.productId])
-    );
+
+    this.store.dispatch(new UpdateProduct(editedProduct));
   }
 
   goBack() {

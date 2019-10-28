@@ -1,10 +1,11 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {ProductService} from '../product.service';
 import {Product} from '../../models/product';
+import {IAppState} from '../../store/state/app.state';
+import {Store} from '@ngrx/store';
+import {GetAllProducts} from '../../store/actions/product.actions';
+import {selectProductList} from '../../store/selectors/product.selectors';
 import {AuthService} from '../../login-page/auth.service';
-import {MatTableDataSource} from '@angular/material/table';
-import {MatPaginator} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-products-list',
@@ -14,21 +15,18 @@ import {MatPaginator} from '@angular/material/paginator';
 })
 export class ProductListComponent implements OnInit {
 
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   products: Product[] = [];
   columnNames: string[] = ['Name', 'Category', 'Price'];
 
-  authService: AuthService;
-  constructor(private productsService: ProductService,
-              private router: Router,
-              authService: AuthService) {
-    this.authService = authService;
+  constructor(private router: Router,
+              private authService: AuthService,
+              private store: Store<IAppState>) {
+
+    this.store.select(selectProductList).subscribe(products => this.products = products);
   }
 
   ngOnInit() {
-    this.productsService.getAllProducts().subscribe(result => {
-      this.products = result;
-    });
+    this.store.dispatch(new GetAllProducts());
   }
 
 

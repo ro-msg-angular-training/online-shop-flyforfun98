@@ -3,6 +3,9 @@ import {AppConfig} from '../app.config';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {AuthUser} from '../models/auth-user';
+import {IAppState} from '../store/state/app.state';
+import {Store} from '@ngrx/store';
+import {selectSelectedUser} from '../store/selectors/user.selectors';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +17,15 @@ export class AuthService {
       'Content-Type': 'application/json'
     })
   };
+
+  private userState$: Observable<any>;
   user: AuthUser;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private store: Store<IAppState>) {
+
+    this.userState$ = this.store.select(selectSelectedUser);
+    this.userState$.subscribe(user => this.user = user);
   }
 
   authenticate(username: string, password: string): Observable<AuthUser> {
@@ -24,9 +33,6 @@ export class AuthService {
     return this.http.post<AuthUser>(this.authUrl, payload, this.httpOptions);
   }
 
-  setUser(user: AuthUser) {
-    this.user = user;
-  }
 
   isAdmin(): boolean {
     return this.user.roles.includes(AppConfig.ROLE_ADMIN);

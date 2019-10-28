@@ -30,10 +30,8 @@ export class ShoppingCartService {
     this.shoppingCart = [];
   }
 
-  checkout(user): Observable<{}> {
-    const order = new OrderInput();
-    order.customer = user.username;
-    order.products = this.getShoppingCartItems().map((item) => ({productId: item.product.id, quantity: item.quantity}));
+  checkout(order: OrderInput): Observable<{}> {
+
     return this.http.post<OrderInput>(this.ordersUrl, order, this.httpOptions);
   }
 
@@ -62,6 +60,6 @@ export class ShoppingCartService {
 
   removeItem(item: any): void {
 
-     this.shoppingCart.splice(this.shoppingCart.indexOf(item), 1);
+    this.shoppingCart.splice(this.shoppingCart.indexOf(item), 1);
   }
 }

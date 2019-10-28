@@ -3,6 +3,10 @@ import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {AuthService} from './auth.service';
 import {AuthUser} from '../models/auth-user';
 import {Router} from '@angular/router';
+import {IAppState} from '../store/state/app.state';
+import {Store} from '@ngrx/store';
+import {GetUser} from '../store/actions/user.actions';
+import {AuthCredentials} from '../models/auth-credentials';
 
 
 @Component({
@@ -25,7 +29,8 @@ export class LoginPageComponent {
 
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService,
-              private router: Router) {
+              private router: Router,
+              private store: Store<IAppState>) {
   }
 
   get username() {
@@ -38,18 +43,11 @@ export class LoginPageComponent {
 
   onLogin() {
 
-    const username = this.username.value;
-    const password = this.password.value;
-    this.authService.authenticate(username, password).subscribe(
-      user => {
-        this.user = user;
-        this.authService.setUser(this.user);
-        this.errorMessage = null;
-        this.router.navigate(['products']);
-      }, error => {
-        this.errorMessage = 'Invalid Login Credentials!';
-      }
-    );
+    const payload = new AuthCredentials();
+    payload.username = this.username.value;
+    payload.password = this.password.value;
+
+    this.store.dispatch(new GetUser(payload));
   }
 
 }

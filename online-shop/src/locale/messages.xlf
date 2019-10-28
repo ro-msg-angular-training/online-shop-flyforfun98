@@ -2,9 +2,8 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-    <trans-unit id="7d2d1dec7fbf562b9cc096875c128f4502f5ce20" datatype="html">
+      <trans-unit id="7d2d1dec7fbf562b9cc096875c128f4502f5ce20" datatype="html">
         <source>Products</source>
-        <target>Produse</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">6</context>
@@ -14,7 +13,6 @@
       </trans-unit>
       <trans-unit id="e81e0afa14ec3131ae7cbdef85c502d4899b0972" datatype="html">
         <source>Cart</source>
-        <target>Cos</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">9</context>
@@ -24,7 +22,6 @@
       </trans-unit>
       <trans-unit id="04168b4c81b699cf2addf470a6a81603683df490" datatype="html">
         <source>Log Out</source>
-        <target>Deconectare</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">13</context>
@@ -32,9 +29,17 @@
         <note priority="1" from="description">Value for the logout navbar</note>
         <note priority="1" from="meaning">Logout Navbar</note>
       </trans-unit>
+      <trans-unit id="bc575951ed7578d2146a9f67cbb9640d3a680b27" datatype="html">
+        <source>Page not found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Title for page not found header</note>
+        <note priority="1" from="meaning">Page Not Found Title</note>
+      </trans-unit>
       <trans-unit id="14e4bb6ac263c97350ede01f34d4bfc946e1b178" datatype="html">
         <source>Login Here</source>
-        <target>Autentifica-te Aici</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
           <context context-type="linenumber">4</context>
@@ -44,7 +49,6 @@
       </trans-unit>
       <trans-unit id="9948aef24717f9241a7ff0afabdb75a7dd6ee47d" datatype="html">
         <source>Username</source>
-        <target>Nume de utilizator</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
           <context context-type="linenumber">10</context>
@@ -54,7 +58,6 @@
       </trans-unit>
       <trans-unit id="505e867975138d358d041820ad5d5dda00558edb" datatype="html">
         <source>Enter Username</source>
-        <target>Introduceti numele de utilizator</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
           <context context-type="linenumber">11</context>
@@ -64,7 +67,6 @@
       </trans-unit>
       <trans-unit id="0f756a14112055638420508f2975448d217fd9d0" datatype="html">
         <source>Password</source>
-        <target>Parola</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
           <context context-type="linenumber">18</context>
@@ -74,7 +76,6 @@
       </trans-unit>
       <trans-unit id="329784f22b038c0163baca6880aa9dd351bab1f5" datatype="html">
         <source>Enter Password</source>
-        <target>Introduceti parola</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
           <context context-type="linenumber">19</context>
@@ -84,7 +85,6 @@
       </trans-unit>
       <trans-unit id="d24bc4973963c4f3340db859f312cb4c0728235d" datatype="html">
         <source>Login</source>
-        <target>Autentificare</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
           <context context-type="linenumber">24</context>
@@ -93,8 +93,8 @@
         <note priority="1" from="meaning">Login Button</note>
       </trans-unit>
       <trans-unit id="bc0ac54327471e6957118bcef05167269b702f8b" datatype="html">
-        <source>Please enter a password</source>
-        <target>Va rog introduceti o parola</target>
+        <source>
+        Please enter a password </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
           <context context-type="linenumber">28</context>
@@ -102,51 +102,10 @@
         <note priority="1" from="description">Span for the password error message field</note>
         <note priority="1" from="meaning">Empty Password</note>
       </trans-unit>
-      <trans-unit id="4913558930a1634e159e484617ae4f6a80b1c4ae" datatype="html">
-        <source>New Product</source>
-        <target>Produs Nou</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/products-list/products-list.component.html</context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-        <note priority="1" from="description">Value for the new product button</note>
-        <note priority="1" from="meaning">New Product Button</note>
-      </trans-unit>
-      <trans-unit id="542d142562cd6689699e3d2bf0fba066060af8b8" datatype="html">
-        <source>Name</source>
-        <target>Nume</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/products-list/products-list.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-        <note priority="1" from="description">Name for the name header of the table</note>
-        <note priority="1" from="meaning">Header Name Title</note>
-      </trans-unit>
-      <trans-unit id="950930f036257833232ea940b5ca4f34111f0bc6" datatype="html">
-        <source>Category</source>
-        <target>Categorie</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/products-list/products-list.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-        <note priority="1" from="description">Category for the category header of the table</note>
-        <note priority="1" from="meaning">Header Category Title</note>
-      </trans-unit>
-      <trans-unit id="7d99ae1ef34c6cc678e3ec909f83fac888d66200" datatype="html">
-        <source>Price</source>
-        <target>Pret</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/products-list/products-list.component.html</context>
-          <context context-type="linenumber">28</context>
-        </context-group>
-        <note priority="1" from="description">Price for the price header of the table</note>
-        <note priority="1" from="meaning">Header Price Title</note>
-      </trans-unit>
       <trans-unit id="ad8315dc0c1d063ea78953dbceca696801b33a2f" datatype="html">
         <source>
 					Add Product
 				</source>
-				<target>Adaugare Produs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">6</context>
@@ -156,216 +115,111 @@
       </trans-unit>
       <trans-unit id="4b252990d37c156eebe36dcc0f11000be64e41be" datatype="html">
         <source>Product Name</source>
-        <target>Numele Produsului</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
         <note priority="1" from="description">Value for the product name field</note>
         <note priority="1" from="meaning">Product Name Field</note>
       </trans-unit>
       <trans-unit id="524566df5b8cbecb264c35d17f83b97387bbe40a" datatype="html">
-        <target>Numele produsului</target>
+        <source>Product name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">17</context>
         </context-group>
         <note priority="1" from="description">Value for the product name placeholder</note>
         <note priority="1" from="meaning">Product Name Placeholder</note>
       </trans-unit>
       <trans-unit id="13703bc8fca0b87615eb4517b4f4d956c9d4140f" datatype="html">
         <source>Product Category</source>
-        <target>Categoria Produsului</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">27</context>
         </context-group>
         <note priority="1" from="description">Value for the product category field</note>
         <note priority="1" from="meaning">Product Category Field</note>
       </trans-unit>
       <trans-unit id="ca4dfc39373f5b6194b0b175da8b85f3e5fe6b6f" datatype="html">
         <source>Product category</source>
-        <target>Categoria produsului</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">29</context>
         </context-group>
         <note priority="1" from="description">Value for the product category placeholder</note>
         <note priority="1" from="meaning">Product Category Placeholder</note>
       </trans-unit>
       <trans-unit id="f3cf11ae9f53d3c2da709fe5efa7255fefa537c7" datatype="html">
         <source>Product Price</source>
-        <target>Pretul Produsului</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">38</context>
         </context-group>
         <note priority="1" from="description">Value for the product price field</note>
         <note priority="1" from="meaning">Product Price Field</note>
       </trans-unit>
       <trans-unit id="92438353d9356f8a4585c1d366df1236e832350b" datatype="html">
         <source>Product price</source>
-        <target>Pretul produsului</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">40</context>
         </context-group>
         <note priority="1" from="description">Value for the product price placeholder</note>
         <note priority="1" from="meaning">Product Price Placeholder</note>
       </trans-unit>
       <trans-unit id="2001e08bfe0e995eff2dad1661af724e1746d3c2" datatype="html">
         <source>Product Image</source>
-        <target>Imaginea Produsului</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">49</context>
         </context-group>
         <note priority="1" from="description">Value for the product image field</note>
         <note priority="1" from="meaning">Product Image Field</note>
       </trans-unit>
       <trans-unit id="e6aaff4f657570cb0eca3bc743c97240bacd1982" datatype="html">
         <source>Product image</source>
-        <target>Imaginea produsului</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">45</context>
         </context-group>
-        <note priority="1" from="description">Value for the product image placeholder</note>
-        <note priority="1" from="meaning">Product Image Placeholder</note>
-      </trans-unit>
-      <trans-unit id="5a6d48be42cdd58494485927b900f3aec06f09ff" datatype="html">
-        <source>Product Description</source>
-        <target>Descrierea Produsului</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
-          <context context-type="linenumber">53</context>
-        </context-group>
-        <note priority="1" from="description">Value for the product description field</note>
-        <note priority="1" from="meaning">Product Description Field</note>
-      </trans-unit>
-      <trans-unit id="85e068beb330fb1b8ba7e0cff7f35f15ff058c2b" datatype="html">
-        <source>Product description</source>
-        <target>Descrierea produsului</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
-          <context context-type="linenumber">55</context>
-        </context-group>
-        <note priority="1" from="description">Value for the product description placeholder</note>
-        <note priority="1" from="meaning">Product Description Placeholder</note>
-      </trans-unit>
-      <trans-unit id="b682c07f202e2a23a767e0a6dd4506091c6a1d02" datatype="html">
-        <source>
-								Submit
-								<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
-							</source>
-				<target>Trimitere</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
-          <context context-type="linenumber">65</context>
-        </context-group>
-        <note priority="1" from="description">Value for the submit button</note>
-        <note priority="1" from="meaning">Submit Button</note>
-      </trans-unit>
-      <trans-unit id="c6c50977a3a8857707cfd791f330972efd511567" datatype="html">
-        <source>
-          Cancel
-        </source>
-        <target>Anulare</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
-          <context context-type="linenumber">73</context>
-        </context-group>
-        <note priority="1" from="description">Value for the cancel button</note>
-        <note priority="1" from="meaning">Cancel Button</note>
-      </trans-unit>
-      <trans-unit id="f84f8f3ca2c5133fb3148ad7c548d3230185dbac" datatype="html">
-        <source>Delete</source>
-        <target>Stergere</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-        <note priority="1" from="description">Value for the delete button</note>
-        <note priority="1" from="meaning">Delete Button</note>
-      </trans-unit>
-      <trans-unit id="363f89cd10f32a5f5245a20992219fe120993aa6" datatype="html">
-        <source>Add to Cart</source>
-        <target>Adaugare in Cos</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
-          <context context-type="linenumber">42</context>
-        </context-group>
-        <note priority="1" from="description">Value for the add to cart button</note>
-        <note priority="1" from="meaning">Add to Cart Button</note>
-      </trans-unit>
-      <trans-unit id="ab5d473fe6f4174ef8a1930299a8db921f549a90" datatype="html">
-        <source>
-					Edit Product
-				</source>
-				<target>Editare Produs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">51</context>
         </context-group>
-        <note priority="1" from="description">Title for the edit product header</note>
-        <note priority="1" from="meaning">Edit Product Title</note>
-      </trans-unit>
-      <trans-unit id="c154d66a3d2393f6ada4caff150864711333c2e6" datatype="html">
-        <source>Edit</source>
-        <target>Editare</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-        <note priority="1" from="description">Value for the edit button</note>
-        <note priority="1" from="meaning">Edit Button</note>
-      </trans-unit>
-      <trans-unit id="6757b715718d3010632a88d0731c4a602dd017a6" datatype="html">
-        <source>
-          Product
-        </source>
-        <target>Produs</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-        <note priority="1" from="description">Value for the product tag</note>
-        <note priority="1" from="meaning">Product Tag</note>
-      </trans-unit>
-      <trans-unit id="efb09ec65a46fc2e64f33abf0d03d77af610ca31" datatype="html">
-        <source>Quantity</source>
-        <target>Cantitate</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shopping-cart/shopping-cart.component.html</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
-        <note priority="1" from="description">Quantity for the quantity header of the mat table</note>
-        <note priority="1" from="meaning">Header Quantity Title</note>
-      </trans-unit>
-      <trans-unit id="7e412a183c8cafbade84b83fe594ec520c8180b5" datatype="html">
-          <source>Checkout</source>
-          <target>Verificare</target>
-          <context-group purpose="location">
-            <context context-type="sourcefile">src/app/shopping-cart/shopping-cart.component.html</context>
-            <context context-type="linenumber">6</context>
-          </context-group>
-          <note priority="1" from="description">Value for the checkout button</note>
-          <note priority="1" from="meaning">Checkout Button</note>
-        </trans-unit>
-        <trans-unit id="bc575951ed7578d2146a9f67cbb9640d3a680b27" datatype="html">
-        <source>Page not found</source>
-        <target>Pagina nu a fost gasita</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
-          <context context-type="linenumber">1</context>
-        </context-group>
-        <note priority="1" from="description">Title for page not found header</note>
-        <note priority="1" from="meaning">Page Not Found Title</note>
+        <note priority="1" from="description">Value for the product image placeholder</note>
+        <note priority="1" from="meaning">Product Image Placeholder</note>
       </trans-unit>
       <trans-unit id="53b24282ae4187f3629ff53df10de4811174b530" datatype="html">
         <source>Product Description
             </source>
-        <target>Descrierea Produsului</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
           <context context-type="linenumber">53</context>
@@ -377,10 +231,53 @@
         <note priority="1" from="description">Value for the product description field</note>
         <note priority="1" from="meaning">Product Description Field</note>
       </trans-unit>
+      <trans-unit id="85e068beb330fb1b8ba7e0cff7f35f15ff058c2b" datatype="html">
+        <source>Product description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <note priority="1" from="description">Value for the product description placeholder</note>
+        <note priority="1" from="meaning">Product Description Placeholder</note>
+      </trans-unit>
+      <trans-unit id="b682c07f202e2a23a767e0a6dd4506091c6a1d02" datatype="html">
+        <source>
+								Submit
+								<x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>
+							</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description">Value for the submit button</note>
+        <note priority="1" from="meaning">Submit Button</note>
+      </trans-unit>
+      <trans-unit id="c6c50977a3a8857707cfd791f330972efd511567" datatype="html">
+        <source>
+          Cancel
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-add/product-add.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">Value for the cancel button</note>
+        <note priority="1" from="meaning">Cancel Button</note>
+      </trans-unit>
       <trans-unit id="fa73d2a0aa82ac289b86ac4b390865f3511895dc" datatype="html">
         <source>Edit
-        </source>
-        <target>Editare</target>
+  </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
           <context context-type="linenumber">6</context>
@@ -388,10 +285,38 @@
         <note priority="1" from="description">Value for the edit button</note>
         <note priority="1" from="meaning">Edit Button</note>
       </trans-unit>
+      <trans-unit id="6757b715718d3010632a88d0731c4a602dd017a6" datatype="html">
+        <source>
+          Product
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Value for the product tag</note>
+        <note priority="1" from="meaning">Product Tag</note>
+      </trans-unit>
+      <trans-unit id="950930f036257833232ea940b5ca4f34111f0bc6" datatype="html">
+        <source>Category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Category for the category column of the product</note>
+        <note priority="1" from="meaning">Header Category Title</note>
+      </trans-unit>
+      <trans-unit id="7d99ae1ef34c6cc678e3ec909f83fac888d66200" datatype="html">
+        <source>Price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Price for the price column of the product</note>
+        <note priority="1" from="meaning">Header Price Title</note>
+      </trans-unit>
       <trans-unit id="121925e74d99bd5eae90d291897c2b6a8b4dde62" datatype="html">
         <source>Delete
-        </source>
-        <target>Stergere</target>
+    </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
           <context context-type="linenumber">38</context>
@@ -401,8 +326,7 @@
       </trans-unit>
       <trans-unit id="ab91f8494aeb312f447e4672da91aa186d3bbb0b" datatype="html">
         <source>Add to Cart
-        </source>
-        <target>Adaugare in Cos</target>
+    </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/product-details/product-details.component.html</context>
           <context context-type="linenumber">44</context>
@@ -410,21 +334,30 @@
         <note priority="1" from="description">Value for the add to cart button</note>
         <note priority="1" from="meaning">Add to Cart Button</note>
       </trans-unit>
+      <trans-unit id="ab5d473fe6f4174ef8a1930299a8db921f549a90" datatype="html">
+        <source>
+					Edit Product
+				</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/product-edit/product-edit.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Title for the edit product header</note>
+        <note priority="1" from="meaning">Edit Product Title</note>
+      </trans-unit>
       <trans-unit id="d2acd0c158e8c66dfdeccf9d849ce72cc4619e77" datatype="html">
-         <source>Checkout
-         </source>
-         <target>Verificare</target>
-         <context-group purpose="location">
-           <context context-type="sourcefile">src/app/shopping-cart/shopping-cart.component.html</context>
-           <context context-type="linenumber">6</context>
-         </context-group>
-         <note priority="1" from="description">Value for the checkout button</note>
-         <note priority="1" from="meaning">Checkout Button</note>
-       </trans-unit>
-       <trans-unit id="58df8ea1bd54adb490e8afd3d255972ea24a3aa2" datatype="html">
+        <source>Checkout
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shopping-cart/shopping-cart.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Value for the checkout button</note>
+        <note priority="1" from="meaning">Checkout Button</note>
+      </trans-unit>
+      <trans-unit id="58df8ea1bd54adb490e8afd3d255972ea24a3aa2" datatype="html">
         <source> Name
-        </source>
-        <target>Nume</target>
+    </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shopping-cart/shopping-cart.component.html</context>
           <context context-type="linenumber">14</context>
@@ -435,7 +368,6 @@
       <trans-unit id="cabd4304d57b4e479da2eca57b928c78586abb97" datatype="html">
         <source> Category
     </source>
-     <target>Categorie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shopping-cart/shopping-cart.component.html</context>
           <context context-type="linenumber">23</context>
@@ -446,7 +378,6 @@
       <trans-unit id="bfc68501073b396cb404682a3ad087b91eaddb87" datatype="html">
         <source> Price
     </source>
-     <target>Pret</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shopping-cart/shopping-cart.component.html</context>
           <context context-type="linenumber">30</context>
@@ -454,10 +385,19 @@
         <note priority="1" from="description">Price for the price header of the mat table</note>
         <note priority="1" from="meaning">Header Price Title</note>
       </trans-unit>
+      <trans-unit id="efb09ec65a46fc2e64f33abf0d03d77af610ca31" datatype="html">
+        <source> Quantity
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shopping-cart/shopping-cart.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Quantity for the quantity header of the mat table</note>
+        <note priority="1" from="meaning">Header Quantity Title</note>
+      </trans-unit>
       <trans-unit id="29d58ba1c80dc4220789fb1dfefd9aeec2c39d08" datatype="html">
         <source>New Product
   </source>
-        <target>Produs Nou</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/products-list/products-list.component.html</context>
           <context context-type="linenumber">5</context>
@@ -465,22 +405,19 @@
         <note priority="1" from="description">Value for the new product button</note>
         <note priority="1" from="meaning">New Product Button</note>
       </trans-unit>
-    </body>
-    <trans-unit id="dbd31f4d41a5f9638fffdc7c05b61a8c484e1cd7" datatype="html">
-         <source>Name
-     </source>
-     <target>Nume</target>
-         <context-group purpose="location">
-           <context context-type="sourcefile">src/app/products/products-list/products-list.component.html</context>
-           <context context-type="linenumber">12</context>
-         </context-group>
-         <note priority="1" from="description">Name for the name header of the table</note>
-         <note priority="1" from="meaning">Header Name Title</note>
-       </trans-unit>
-    <trans-unit id="f4c93053fa9f5b7ca371af8de8ab0aab8284878a" datatype="html">
+      <trans-unit id="dbd31f4d41a5f9638fffdc7c05b61a8c484e1cd7" datatype="html">
+        <source>Name
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/products-list/products-list.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Name for the name header of the table</note>
+        <note priority="1" from="meaning">Header Name Title</note>
+      </trans-unit>
+      <trans-unit id="f4c93053fa9f5b7ca371af8de8ab0aab8284878a" datatype="html">
         <source>Category
     </source>
-    <target>Categoria</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/products-list/products-list.component.html</context>
           <context context-type="linenumber">23</context>
@@ -491,7 +428,6 @@
       <trans-unit id="956b74bcc44118a27c32e0b9944a44f623b24928" datatype="html">
         <source>Price
     </source>
-    <target>Pret</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/products/products-list/products-list.component.html</context>
           <context context-type="linenumber">31</context>
@@ -499,5 +435,6 @@
         <note priority="1" from="description">Price for the price header of the table</note>
         <note priority="1" from="meaning">Header Price Title</note>
       </trans-unit>
+    </body>
   </file>
 </xliff>

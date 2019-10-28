@@ -1,4 +1,4 @@
-import {Injectable, OnInit} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {
   CanActivate,
   ActivatedRouteSnapshot,
@@ -7,26 +7,30 @@ import {
   Router
 } from '@angular/router';
 import {Observable} from 'rxjs';
-import {AuthService} from './auth.service';
 import {Store} from '@ngrx/store';
 import {AuthUser} from '../models/auth-user';
+import {IAppState} from '../store/state/app.state';
+import {selectSelectedUser} from '../store/selectors/user.selectors';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
 
+  private user: AuthUser;
 
   constructor(private router: Router,
-              private authService: AuthService) {
+              private store: Store<IAppState>) {
+
+    this.store.select(selectSelectedUser).subscribe(user => this.user = user);
   }
 
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (this.authService.user) {
-      return !next.data.roles || this.authService.user.roles.includes(next.data.roles);
+    if (this.user) {
+      return !next.data.roles || this.user.roles.includes(next.data.roles);
     }
     this.router.navigateByUrl('/login');
     return false;

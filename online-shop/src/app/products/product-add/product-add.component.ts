@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
-import {ProductService} from '../product.service';
+import {Router} from '@angular/router';
 import {Product} from '../../models/product';
+import {Store} from '@ngrx/store';
+import {IAppState} from '../../store/state/app.state';
+import {AddNewProduct} from '../../store/actions/product.actions';
 
 @Component({
   selector: 'app-product-add',
@@ -15,7 +17,7 @@ export class ProductAddComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
-              private productService: ProductService) {
+              private store: Store<IAppState>) {
   }
 
 
@@ -69,9 +71,7 @@ export class ProductAddComponent implements OnInit {
     newProduct.category = this.productCategory.value;
     newProduct.image = this.productImage.value;
 
-    this.productService.createProduct(newProduct).subscribe(() =>
-      this.router.navigate(['products'])
-    );
+    this.store.dispatch(new AddNewProduct(newProduct));
   }
 
   goBack() {

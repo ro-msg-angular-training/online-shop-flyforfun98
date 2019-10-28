@@ -1,9 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from '../../models/product';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ProductService} from '../product.service';
 import {ShoppingCartService} from '../../shopping-cart/shopping-cart.service';
 import {AuthService} from '../../login-page/auth.service';
+import {IAppState} from '../../store/state/app.state';
+import {Store} from '@ngrx/store';
+import {selectSelectedProduct} from '../../store/selectors/product.selectors';
+import {GetProduct, RemoveProduct} from '../../store/actions/product.actions';
 
 @Component({
   selector: 'app-product-details',
@@ -14,28 +17,26 @@ export class ProductDetailsComponent implements OnInit {
 
   product: Product;
   productId: number;
-  authService: AuthService;
 
   constructor(private route: ActivatedRoute,
-              private productService: ProductService,
               private router: Router,
               private shoppingService: ShoppingCartService,
-              authService: AuthService) {
-    this.authService = authService;
+              public authService: AuthService,
+              private store: Store<IAppState>) {
+
+    this.store.select(selectSelectedProduct).subscribe(product => this.product = product);
   }
 
   ngOnInit() {
 
     this.productId = this.route.snapshot.params.id;
-    this.productService.getProduct(this.productId).subscribe(product => this.product = product);
+    this.store.dispatch(new GetProduct(this.productId));
 
   }
 
   onDelete() {
 
-    this.productService.removeProduct(this.productId).subscribe(() =>
-      this.router.navigate(['products'])
-    );
+    this.store.dispatch(new RemoveProduct(this.productId));
   }
 
   onAdd() {
