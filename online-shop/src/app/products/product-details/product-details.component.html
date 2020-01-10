@@ -43,7 +43,19 @@
             *ngIf="authService.isCustomer()"
             i18n="Add to Cart Button|Value for the add to cart button">Add to Cart
     </button>
+    <div class="product-quantity-buttons">
+      <button class="icon-button margin-icon">
+        <i class="material-icons icon-size arrow-up-clip-path" (click)="countUp()">
+          keyboard_arrow_up
+        </i>
+      </button>
+      <span class="product-quantity-number">{{productQuantity}}</span>
+      <button class="icon-button margin-icon">
+        <i class="material-icons icon-size arrow-down-clip-path" (click)="countDown()">
+          keyboard_arrow_down
+        </i>
+      </button>
+    </div>
   </div>
-
 
 </div>

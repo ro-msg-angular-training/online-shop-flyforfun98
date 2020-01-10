@@ -12,21 +12,29 @@ export const productReducers = (
         selectedProduct: action.payload
       };
     case EProductActions.GetAllProductsSuccess:
+
       return {
         ...state,
-        products: action.payload
+        products: action.payload.entities.data,
+        entities: action.payload
       };
-    case EProductActions.AddNewProductSuccess:
+    case
+    EProductActions.AddNewProductSuccess
+    :
       return {
         ...state,
         products: state.products.concat(action.payload)
       };
-    case EProductActions.RemoveProductSuccess:
+    case
+    EProductActions.RemoveProductSuccess
+    :
       return {
         ...state,
         products: state.products.filter(p => p.id !== action.payload)
       };
-    case EProductActions.UpdateProductSuccess:
+    case
+    EProductActions.UpdateProductSuccess
+    :
 
       const productIndex = state.products.findIndex(p => p.id === action.payload.id);
       if (productIndex === -1) {

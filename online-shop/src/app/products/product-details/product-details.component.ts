@@ -17,6 +17,7 @@ export class ProductDetailsComponent implements OnInit {
 
   product: Product;
   productId: number;
+  productQuantity = 1;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -31,7 +32,6 @@ export class ProductDetailsComponent implements OnInit {
 
     this.productId = this.route.snapshot.params.id;
     this.store.dispatch(new GetProduct(this.productId));
-
   }
 
   onDelete() {
@@ -40,10 +40,20 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   onAdd() {
-    this.shoppingService.addItem(this.product);
+    this.shoppingService.addItem(this.product, this.productQuantity);
   }
 
   onEdit() {
     this.router.navigate(['products/' + this.productId + '/edit']);
+  }
+
+  countUp() {
+    this.productQuantity++;
+  }
+
+  countDown() {
+    if (this.productQuantity > 1) {
+      this.productQuantity--;
+    }
   }
 }

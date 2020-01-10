@@ -9,7 +9,15 @@ export const selectSelectedProduct = createSelector(
   (state: IProductState) => state.selectedProduct
 );
 
-export const selectProductList = createSelector(
+export const selectNormProductList = createSelector(
   selectProducts,
-  (state: IProductState) => state.products
+  (state: IProductState) => state.entities
 );
+
+export const selectProductList = createSelector(
+  selectNormProductList,
+  (state: IProductState) => {
+    return Object.keys(state).map(() => state.entities.data)[0];
+  }
+);
+

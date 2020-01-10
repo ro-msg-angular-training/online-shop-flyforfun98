@@ -13,10 +13,17 @@ export const cartReducers = (
         ...state,
         items: action.payload
       };
+
     case EShoppingCartActions.CreateCheckoutSuccess:
       return {
         ...state,
         order: action.payload
+      };
+
+    case EShoppingCartActions.RemoveShoppingItemSuccess:
+      return {
+        ...state,
+        items: state.items.filter(item => item.product.id !== action.payload.product.id)
       };
     default:
       return state;

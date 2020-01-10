@@ -6,7 +6,7 @@ import {AuthService} from '../login-page/auth.service';
 import {Store} from '@ngrx/store';
 import {IAppState} from '../store/state/app.state';
 import {selectShoppingCartList} from '../store/selectors/shopping-cart.selectors';
-import {CreateCheckout} from '../store/actions/shopping-cart.actions';
+import {CreateCheckout, GetAllShoppingItems, RemoveShoppingItem} from '../store/actions/shopping-cart.actions';
 import {OrderInput} from '../models/order-input';
 
 @Component({
@@ -17,7 +17,7 @@ import {OrderInput} from '../models/order-input';
     '../products/product-details/product-details.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
-  shoppingCartItems: ShoppingCartItem[] = [];
+  shoppingCartItems: ShoppingCartItem[];
   productColumn = ['Name', 'Category', 'Price', 'Quantity', 'Action'];
 
   constructor(private shoppingService: ShoppingCartService,
@@ -25,14 +25,11 @@ export class ShoppingCartComponent implements OnInit {
               private authService: AuthService,
               private store: Store<IAppState>) {
 
+    this.store.select(selectShoppingCartList).subscribe(items => this.shoppingCartItems = items);
   }
 
   ngOnInit() {
-
-    // The next line does nothing because we have no GET request. Left here if further updates needed
-    this.store.select(selectShoppingCartList).subscribe(items => this.shoppingCartItems = items);
-
-    this.shoppingCartItems = this.shoppingService.getShoppingCartItems();
+    this.store.dispatch(new GetAllShoppingItems());
   }
 
 
@@ -45,10 +42,11 @@ export class ShoppingCartComponent implements OnInit {
       quantity: item.quantity
     }));
     this.store.dispatch(new CreateCheckout(order));
+    this.router.navigate(['products']);
     this.shoppingService.clearShoppingCart();
   }
 
-  removeItem(item: any) {
-    this.shoppingService.removeItem(item);
+  removeItem(itemToBeRemoved: ShoppingCartItem) {
+    this.store.dispatch(new RemoveShoppingItem(itemToBeRemoved));
   }
 }

@@ -12,7 +12,7 @@ import {
 } from '../actions/product.actions';
 import {of} from 'rxjs';
 import {Router} from '@angular/router';
-
+import {NormalizedProducts} from '../../models/normalized-products';
 
 @Injectable()
 export class ProductEffects {
@@ -29,7 +29,15 @@ export class ProductEffects {
   getAllProducts$ = this.actions$.pipe(
     ofType<GetAllProducts>(EProductActions.GetAllProducts),
     switchMap(() => this.productService.getAllProducts()),
-    switchMap(products => of(new GetAllProductsSuccess(products)))
+    switchMap(products => {
+
+      const normalizedProducts = new NormalizedProducts();
+      const data = products;
+      const ui = {allIds: products.map(product => product.id)};
+      normalizedProducts.entities = {data, ui};
+
+      return of(new GetAllProductsSuccess(normalizedProducts));
+    })
   );
 
   @Effect()

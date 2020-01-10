@@ -3,9 +3,10 @@ import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Router} from '@angular/router';
 import {
   CreateCheckout, CreateCheckoutSuccess,
-  EShoppingCartActions
+  EShoppingCartActions, GetAllShoppingItemsSuccess, RemoveShoppingItem, RemoveShoppingItemSuccess
 } from '../actions/shopping-cart.actions';
 import {map, switchMap, tap} from 'rxjs/operators';
+import {of} from 'rxjs';
 
 export class ShoppingCartEffects {
 
@@ -18,7 +19,7 @@ export class ShoppingCartEffects {
     ofType<CreateCheckout>(EShoppingCartActions.CreateCheckout),
     map(action => action.payload),
     switchMap(payload => this.cartService.checkout(payload).pipe(
-      map(newCheckout => {
+      map(() => {
         return new CreateCheckoutSuccess(payload);
       })
     )));
@@ -27,6 +28,26 @@ export class ShoppingCartEffects {
   createCheckoutSuccess$ = this.actions$.pipe(
     ofType<CreateCheckoutSuccess>(EShoppingCartActions.CreateCheckoutSuccess),
     tap(() => this.router.navigate(['products']))
+  );
+
+  @Effect()
+  getAllShoppingItems$ = this.actions$.pipe(
+    ofType<GetAllShoppingItemsSuccess>(EShoppingCartActions.GetAllShoppingItems),
+    map(action => action.payload),
+    switchMap(() => {
+      const items = this.cartService.getShoppingCartItems();
+      return of(new GetAllShoppingItemsSuccess(items));
+    }),
+  );
+
+  @Effect()
+  removeShoppingItem$ = this.actions$.pipe(
+    ofType<RemoveShoppingItem>(EShoppingCartActions.RemoveShoppingItem),
+    map(action => action.payload),
+    switchMap(payload => {
+      this.cartService.removeItem(payload);
+      return of(new RemoveShoppingItemSuccess(payload));
+    })
   );
 
   constructor(private cartService: ShoppingCartService,

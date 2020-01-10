@@ -5,7 +5,7 @@
           i18n="New Product Button|Value for the new product button">New Product
   </button>
 </div>
-<mat-table class="mat-elevation-z8 custom-container" [dataSource]="products">
+<mat-table id="productsTable" class="mat-elevation-z8 custom-container" [dataSource]="products">
 
   <ng-container matColumnDef="Name">
     <mat-header-cell i18n="Header Name Title|Name for the name header of the table"

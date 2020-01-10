@@ -35,12 +35,12 @@ export class ShoppingCartService {
     return this.http.post<OrderInput>(this.ordersUrl, order, this.httpOptions);
   }
 
-  addItem(product: Product): void {
+  addItem(product: Product, productQuantity: number): void {
 
     let added = false;
     const shoppingCartItem = new ShoppingCartItem();
     shoppingCartItem.product = product;
-    shoppingCartItem.quantity = 1;
+    shoppingCartItem.quantity = productQuantity;
 
     if (this.shoppingCart.length === 0) {
       this.shoppingCart.push(shoppingCartItem);
@@ -49,7 +49,7 @@ export class ShoppingCartService {
     for (const item of this.shoppingCart) {
       if (item.product.id === product.id) {
         added = true;
-        item.quantity++;
+        item.quantity = item.quantity + productQuantity;
       }
     }
 

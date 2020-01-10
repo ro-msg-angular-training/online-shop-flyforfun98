@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {Product} from '../../models/product';
 import {IAppState} from '../../store/state/app.state';
 import {Store} from '@ngrx/store';
 import {GetAllProducts} from '../../store/actions/product.actions';
@@ -15,17 +14,20 @@ import {AuthService} from '../../login-page/auth.service';
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product[] = [];
+  products: any; // Product[] = [];
   columnNames: string[] = ['Name', 'Category', 'Price'];
 
   constructor(private router: Router,
               private authService: AuthService,
               private store: Store<IAppState>) {
 
-    this.store.select(selectProductList).subscribe(products => this.products = products);
+    this.store.select(selectProductList).subscribe(products => {
+      this.products = products;
+    });
   }
 
   ngOnInit() {
+
     this.store.dispatch(new GetAllProducts());
   }
 

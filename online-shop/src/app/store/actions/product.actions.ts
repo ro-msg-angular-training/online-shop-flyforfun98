@@ -1,5 +1,6 @@
 import {Action} from '@ngrx/store';
 import {Product} from '../../models/product';
+import {NormalizedProducts} from '../../models/normalized-products';
 
 export enum EProductActions {
   GetProduct = '[Product] Get Product',
@@ -35,7 +36,7 @@ export class GetAllProducts implements Action {
 export class GetAllProductsSuccess implements Action {
   public readonly type = EProductActions.GetAllProductsSuccess;
 
-  constructor(public payload: Product[]) {
+  constructor(public payload: NormalizedProducts) {
   }
 }
 
